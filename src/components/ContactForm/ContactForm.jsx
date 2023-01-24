@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addContact } from "redux/contacts/contacts.slice";
@@ -67,4 +68,9 @@ export const ContactForm = () => {
       </button>
     </form>
   );
+};
+
+ContactForm.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.string,
 };

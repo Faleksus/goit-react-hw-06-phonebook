@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { useDispatch } from "react-redux";
 import { changeFilter } from "redux/filter/filter.slice";
 import css from "./Filter.module.css";
@@ -20,4 +21,9 @@ export const Filter = () => {
       />
     </section>
   );
+};
+
+Filter.propTypes = {
+  filter: PropTypes.string,
+  onChange: PropTypes.func,
 };
